@@ -1,0 +1,6 @@
+@Librery_Baez_Nicolas_HostAddress = http://localhost:5122
+
+GET {{Librery_Baez_Nicolas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
