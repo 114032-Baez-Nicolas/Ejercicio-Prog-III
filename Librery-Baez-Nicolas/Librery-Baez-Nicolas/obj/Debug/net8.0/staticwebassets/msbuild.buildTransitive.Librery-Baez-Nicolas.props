@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Librery-Baez-Nicolas.props" />
-</Project>
