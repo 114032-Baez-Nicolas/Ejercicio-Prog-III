@@ -81,4 +81,22 @@ public class DbLibraryRepository : ILibreryRepository
         }
     }
 
+    //Obtener Autores x Id
+    public async Task<Autor> GetAutorAsync(int Id)
+    {
+        return await _context.DbSetAutores.FindAsync(Id);
+
+    }
+
+    //Obtener Generos x Id
+    public async Task<Genero> GetGeneroAsync(int Id)
+    {
+        return await _context.DbSetGeneros.FindAsync(Id);
+    }
+
+    //Obtener Libros x ISBN
+    public async Task<Libro> GetLibroAsync(int ISBN)
+    {
+        return await _context.DbSetLibros.FindAsync(ISBN);
+    }
 }

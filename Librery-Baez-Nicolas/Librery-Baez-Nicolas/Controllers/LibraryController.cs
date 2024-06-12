@@ -72,5 +72,32 @@ namespace Librery_Baez_Nicolas.Controllers
 
             return Ok();
         }
+
+        //Obtener Autores x Id
+        [HttpGet("autores/{Id}")]
+        public async Task<IActionResult> GetAutor(int Id)
+        {
+            var lAutor = await _libreryRepository.GetAutorAsync(Id);
+
+            return Ok(lAutor);
+        }
+
+        //Obtener Generos x Id
+        [HttpGet("generos/{Id}")]
+        public async Task<IActionResult> GetGenero(int Id)
+        {
+            var lGenero = await _libreryRepository.GetGeneroAsync(Id);
+
+            return Ok(lGenero);
+        }
+
+        //Obtener Libros x ISBN
+        [HttpGet("libros/{ISBN}")]
+        public async Task<IActionResult> GetLibro(int ISBN)
+        {
+            var lLibro = await _libreryRepository.GetLibroAsync(ISBN);
+
+            return Ok(lLibro);
+        }
     }
 }
