@@ -6,6 +6,16 @@ public interface ILibreryRepository
 {
     //Obtener Autores
     Task<List<Autor>> GetAutoresAsync();
+
+    //Obtener Autores x Id
+    Task<Autor> GetAutorAsync(int Id);
+
+    //Obtener Generos x Id
+    Task<Genero> GetGeneroAsync(int Id);
+
+    //Obtener Libros x ISBN
+    Task<Libro> GetLibroAsync(int ISBN);
+
     //Obtener Generos
     Task<List<Genero>> GetGenerosAsync();
     //Obtener Libros
@@ -19,4 +29,5 @@ public interface ILibreryRepository
 
     //Delete (Eliminar Libros)
     Task DeleteLibroAsync(int ISBN);
+
 }
